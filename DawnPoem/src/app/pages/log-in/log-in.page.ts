@@ -12,34 +12,9 @@ import { IonicModule, AlertController } from '@ionic/angular'; // IonicModule ã‚
 })
 export class LogInPage implements OnInit {
 
-  alertButtons = [
-    {
-      text: 'OK',
-      handler: () => {
-        console.log('OK clicked');
-      }
-    },
-    {
-      text: 'Cancel',
-      role: 'cancel',
-      handler: () => {
-        console.log('Cancel clicked');
-      }
-    }
-  ];
-
-  constructor(private alertController: AlertController) { }
+  constructor() { }
 
   ngOnInit() {
   }
-
-  async presentAlert() {
-    const alert = await this.alertController.create({
-      header: 'Alert',
-      message: 'This is an alert message.',
-      buttons: this.alertButtons
-    });
-
-    await alert.present();
-  }
+  
 }
